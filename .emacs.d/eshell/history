@@ -1,0 +1,16 @@
+ls
+cd ..
+ls
+p
+p
+pwd
+pwd
+ssh ps_admin@psproduction.cloudapp.net
+gi status
+git status
+git diff assetview/fftchart.js 
+git add assetview/fftchart.js 
+git status
+git checkout development
+git status
+help

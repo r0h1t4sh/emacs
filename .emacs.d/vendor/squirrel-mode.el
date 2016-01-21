@@ -1,0 +1,1 @@
+/home/rohitash/emacs_lib/squirrel/squirrel-mode.el
