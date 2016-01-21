@@ -4,3 +4,5 @@
 .emacs.d/ac-comphist.dat
 .emacs.d/.*
 .emacs.d/xkcd
+.emacs.d/eshell/lastdir
+.emacs.d/eshell/history
