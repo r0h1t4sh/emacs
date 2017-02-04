@@ -256,7 +256,7 @@
     (add-to-list 'load-path project)))
 
 ;; Squirrel
-(require 'squirrel-mode)
+;;(require 'squirrel-mode)
 
 ;; Org mode specific
 (add-to-list 'auto-mode-alist '("\\.org\\¡¯" . org-mode))
@@ -434,5 +434,35 @@
 
 (global-set-key (kbd "C-c C-h") 'hs-enable-and-toggle)
 (global-set-key (kbd "C-c C-j") 'hs-enable-and-hideshow-all)
+
+;; fonts
+
+(if (string= (symbol-name system-type) "windows-nt")
+    (set-default-font "-outline-Consolas-normal-normal-normal-mono-18-*-*-*-c-*-iso8859-1")
+  (modify-frame-parameters nil '((wait-for-wm . nil))))
+
+(if (string= (symbol-name system-type) "darwin")
+    (set-default-font "-outline-Inconsolata-normal-normal-normal-mono-22-*-*-*-c-*-iso8859-1")
+  (modify-frame-parameters nil '((wait-for-wm . nil))))
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(python-check-command "/usr/local/bin/pyflakes"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(defun testers-dream ()
+  (interactive)
+  (defvar ccmd)
+  (setq ccmd (concat "g++ " (buffer-name) " && ./a.out"))
+  (shell-command ccmd))
 
 (message "Done loading .emacs")
