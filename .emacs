@@ -1,4 +1,4 @@
- ;; ref: http://www.aaronbedra.com/emacs.d/
+;; ref: http://www.aaronbedra.com/emacs.d/
 ;; User
 (setq user-full-name "Rohitash Kumar")
 (setq user-mail-address "r0h1t4sh@gmail.com")
@@ -464,5 +464,12 @@
   (defvar ccmd)
   (setq ccmd (concat "g++ " (buffer-name) " && ./a.out"))
   (shell-command ccmd))
+
+;; Remap meta key from alt/option to command
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
+
 
 (message "Done loading .emacs")
